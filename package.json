@@ -1,5 +1,5 @@
 {
-  "name": "soflow-learning-project",
+  "name": "soflow-clone",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,7 +13,6 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "bootstrap": "^5.3.8",
     "vue": "^3.5.29",
     "vue-router": "^5.0.3"
   },
