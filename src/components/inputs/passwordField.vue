@@ -1,7 +1,7 @@
 <template>
   <div class="input-group">
     <label>{{ label }}</label>
-    <input type="text" placeholder="Enter Your Password">
+    <input type="text" :placeholder placeholder="Enter Your Password">
   </div>
 </template>
 
