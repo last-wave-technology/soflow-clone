@@ -1,17 +1,7 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-    role="img"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-  >
-    <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.12" />
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
     <path
-      d="M12 6a4 4 0 0 0-4 4v1.5a1.5 1.5 0 0 1-3 0V11a7 7 0 1 1 14 0v.5a1.5 1.5 0 0 1-3 0V10a4 4 0 0 0-4-4Zm0 9.25a1.75 1.75 0 1 0 0 3.5a1.75 1.75 0 0 0 0-3.5Z"
-      fill="currentColor"
+      d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.666.105 5.5 5.5 0 0 0-.114 7.665L10 18.78l8.39-8.4a5.5 5.5 0 0 0-.114-7.665 5.5 5.5 0 0 0-7.666-.105l-.61.61z"
     />
   </svg>
 </template>
-
