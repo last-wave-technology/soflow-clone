@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="home-page ">
     <div class="home-card">
       <img class="home-image" src="../assets/icon-transparent-cropped.png" alt="Soflow Ops Logo" />
 
@@ -16,21 +16,26 @@
 
         <button class="login-button">Login</button>
       </div> -->
-      <form>
+      <form class="text-start" @submit.prevent="login">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input v-model="email" type="email"  class="form-control rounded-2 py-2 bg-light border is-invalid"  id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter your email">
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label" >Password</label>
-          <input v-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+          <label for="exampleInputPassword1" class="form-label  ">Password</label>
+          <input v-model="password" type="password" class="form-control rounded-2 py-2  bg-light border " id="exampleInputPassword1"
+            placeholder="Enter your password"><legend></legend>
+            
         </div>
-        <div class="mb-3 form-check">
+        <!-- <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        </div> -->
+        <a href="#" target="blank" class="fs-6 text-decoration-none fw-medium d-block text-end">Forgot Password?</a>
+        <button  class="login-button">Login</button>
+
       </form>
 
       <p class="version">v1.0.0</p>
@@ -40,15 +45,34 @@
 
 
 <script>
+
 export default {
   data() {
     return {
       email: '',
-      password: '',
+      password: "",
+
     }
   },
-}
 
+ methods:{
+  login(){
+    if(this.email === '' && this.email === '' ) {
+      alert("Please Enter Your Credentials")
+    }
+    else if(this.email ==='') {
+   alert("Please Enter Your email")
+    }
+
+    else if(this.password === ''){
+         alert("Please Enter Your password")
+    }
+    else{
+         alert("login sucessfull")
+    }
+  }
+ }
+}
 
 
 
@@ -67,8 +91,9 @@ export default {
 }
 
 .home-card {
-  width: 100%;
-  max-width: 460px;
+  width: 30%;
+  height: 10%;
+  /* max-width: 460px; */
   background: #f9fbff;
   border-radius: 32px;
   padding: 40px 40px 24px;
@@ -96,44 +121,30 @@ export default {
   color: #a1a9be;
 }
 
-.form-section {
-  margin-top: 32px;
-  text-align: left;
-}
 
-.forgot-row {
-  margin-top: 12px;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.forgot-link {
-  font-size: 14px;
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
 
-.forgot-link:hover {
-  text-decoration: underline;
-}
+
+
+
 
 .login-button {
   margin-top: 20px;
   width: 100%;
-  padding: 12px 16px;
-  border-radius: 999px;
+  padding: 14px 90px;
+  border-radius: 15px;
   border: none;
   background: #2563eb;
   color: #ffffff;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .login-button:hover {
   background: #1d4ed8;
 }
+
 
 .version {
   margin-top: 20px;
